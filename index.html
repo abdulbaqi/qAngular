@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app='MsgApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body { font-size: 1.2em; }</style>
+    <title>Check the Quran</title>
+  </head>
+  <body>
+    <p> Enter Surah and aya number:
+    <div ng-controller='MsgController'>
+     <div>
+     <input type="text"
+          ng-model="surah"
+          >
+     <input type="text"
+          ng-model="aya"
+          >
+      </div>
+
+      <h2>Surah {{surah}} verse no {{aya}}</h2>
+
+      <div>
+        
+
+        <img ng-src="http://www.everyayah.com/data/images_png/{{surah}}_{{aya}}.png">
+      </div>
+    </div>
+  </body>
+</html>
